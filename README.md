@@ -1,4 +1,4 @@
-# Digital-Clock
+# Digital Clock
 A remote controlled digital clock, using a [NodeMCU](http://www.nodemcu.com/index_en.html) with a [4-Digit 7-Segment Display](https://www.adafruit.com/product/878).
 
 For many years I've had two [DCF77](https://en.wikipedia.org/wiki/DCF77) controlled digital clocks. Signal reception has been degrading over the years, probably due to the growing amount of radio signals in the ether, and some time ago the first of those clocks failed completely. My first idea was to replace the internals with a NodeMCU and a display, but due to size restraints I decided to start from scratch, using a 3D-printed case with a plexiglass front that allows the digits to shine through while hiding the internals.
