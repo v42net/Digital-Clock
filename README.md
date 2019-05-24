@@ -8,4 +8,4 @@ For many years I've had two [DCF77](https://en.wikipedia.org/wiki/DCF77) control
 I've been experimenting with [OpenSCAD](http://www.openscad.org/) for some time, and I like it because (citing their website) 
 *"it is something like a 3D-compiler that reads in a script file that describes the object and renders the 3D model from this script file"*. The result can be exported as an STL-file (or a number of other formats) for printing with your 3D printer of choice.
 
-`Case.scad` and the exported `Case.stl` contain version 0.1 of this case. Be aware that this design has not been tested yet ...
+
