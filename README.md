@@ -16,4 +16,4 @@ The software is still in development and consists of two parts:
 *  A PHP script on a webserver provides the NodeMCU with the time to be displayed.
 *  The NodeMCU code that displays the time it is retrieving from the webserver.
 
-More details, including my reasons for the two seperate parts, will be published later.
+More details, including my reasons for the two separate parts, will be published later.
