@@ -74,23 +74,27 @@ NM_cy  = NM_bl / 2 - DC_ws;             // NodeNCU y center position
 //-----------------------------------------------------------------------------
 // Render the case:
 
-Front();
-Back();
-
-// color ([1,0,0]) // for testing
-// translate ([0, IC_xy, DC_bt+DC_ws])
-// rotate ([-90,0,0]) mirror ([0,0,1])
-Mount();
+Front();        // Render the front in printing position
+// TestFront();    // Render the front in its final position
+Back();         // Render the back in printing & final position
+Mount();        // Render the MCU mount in printing position
+// TestMount();    // Render the MCU mount in its final position
 
 //-----------------------------------------------------------------------------
 module Front() {
 
+    color ([1,0.5,0.5])
     translate ([DC_wt-OC_xyz,DC_wt,DC_wt]) {
         difference() {
             FrontBase();
             FrontHoles();
         }
     }
+}
+module TestFront() {
+    translate ([0,0,OC_xyz])
+    rotate ([0,180,0])
+    Front();
 }
 module FrontBase() {
     
@@ -205,12 +209,19 @@ module BackConnector() {
     translate ([x,y,-1]) cube ([w, h, 50]);
 }
 module Mount() {
-    mirror ([0,1,0]) translate ([DC_wt + 2*DC_ws + CW_tw,0,0]) {
+    color ([0.5,0.5,1]) 
+    mirror ([0,1,0]) 
+    translate ([DC_wt + 2*DC_ws + CW_tw,0,0]) {
         difference() {
             MountBase();
             MountHoles();
         }
     }
+}
+module TestMount() {
+    translate ([0, IC_xy, DC_bt+DC_ws])
+    rotate ([-90,0,0]) mirror ([0,0,1])
+    Mount();
 }
 module MountBase() {
     cube ([NM_sw, NM_sl, DC_wt]);
