@@ -9,3 +9,11 @@ I've been experimenting with [OpenSCAD](http://www.openscad.org/) for some time,
 *"it is something like a 3D-compiler that reads in a script file that describes the object and renders the 3D model from this script file"*. The result can be exported as an STL-file (or a number of other formats) for printing with your 3D printer of choice.
 
 Please be aware that the design in [Case.scad](Case.scad) and the exported [Case.stl](Case.stl) have not been tested yet ...
+
+## The software
+
+The software is still in development and consists of two parts:
+*  A PHP script on a webserver provides the NodeMCU with the time to be displayed.
+*  The NodeMCU code that displays the time it is retrieving from the webserver.
+
+More details, including my reasons for the two seperate parts, will be published later.
